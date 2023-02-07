@@ -13,74 +13,22 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
 
+
 ## Background
 
-Collaborative Site For Aquatic Preserve Water Quality and Seagrass Assessment
-All materials on this site are considered DRAFT work products.
-A map of the seagrass transect locations is provided below 
-
-# [Site List](https://mikewessel.github.io/AP/docs/sites.pdf){target="_blank"}
-The hyperlink above includes a list of seagrass transects along with descriptive data used to summarize attributes of the transect for data management purposes is provided below which can be downloaded for viewing and commenting: 
-
-Other tabs on this site include:
-  Descriptive Statistics, 
-  Visualizations, and 
-  Analytical Results
+Since 2014, NOAA has invested in watershed restoration activities on Culebra to reduce land-based sources of pollution (LBSP) to coastal habitats surrounding the island.  To date, 100% of NOAAâ€™s LBSP management priority actions have been funded and are projected to be completed by 2025. These LBSP management priorities represent thousands of best management practices (BMPs) spread across hundreds of smaller scale restoration projects that are implemented in targeted locations to elicit a watershed scale reduction in pollution to the marine environment.
 
 
-```{r setup}
+## Nearshore Water Quality Data Entry Site
 
-library(tidyverse)
-library(sf)
-library(haven)
-library(plotly)
-library(leaflet)
-library(here)
-library(sp)
-library(maptools)
-```
+Use the link below "Data Entry" to access the google form for water quality data entry
 
-# Interactive Map 
-A Display of aquatic preserve seagrass transect locations and associated FDEP Waterbody Identifiers (WBIDs) is provided below. Hovering the cursor over the transect location provides the site name while hoverig over the polygon presents the FDEP Waterbody Identifier.
+# [Data Entry](https://docs.google.com/forms/d/e/1FAIpQLSd4sNacnMR6bJ9kmtmCmxhOPChgTdoo3RkOXHCMR6f9jJdppg/viewform?vc=0&c=0&w=1&flr=0&dods){target="_blank"}
+
+                        
 
 
 
-
-
-```{r package-options, include=TRUE}
-knitr::opts_knit$set(message=FALSE,echo=FALSE)
-
-setwd(here::here("./shapes"))
-
-#IWR_wbid <- sf::read_sf(dsn = ".", layer = "WBID_Run61")%>%
-#    filter(WBID %in% c("1983A1","1983A","1983B","1991B","2065A","2065B","2065C","2065D","2065E","2065F","2065G","2065H1","1991A","2056A","2056B","3240A","3240B","3258A1","3258I"))
-
-#st_write(st_as_sf(IWR_wbid),"IWR_wbid.shp")
-
-IWR_wbid<-st_read("IWR_wbid.shp",quiet=TRUE)
-
-CHAP_tr <- sf::read_sf(dsn = ".", layer = "CHAP_SG_Stat21_Proj",quiet=TRUE)
-EBAP_tr <- sf::read_sf(dsn = ".", layer = "EBAP_SG_Stat21_Proj",quiet=TRUE)
-
-# assign crs
-IWR_wbid <- st_transform(IWR_wbid, crs = 4326)
-CHAP_tr <- st_transform(CHAP_tr , crs = 4326)
-EBAP_tr <- st_transform(EBAP_tr, crs = 4326)
-
-
-both<- spCbind(IWR_wbid, CHAP_tr)
-
-
-
-
-
-# plot
-leaflet::leaflet() %>%
-  leaflet::addProviderTiles(providers$CartoDB.Voyager) %>%
-  leaflet::addPolygons(color = "#222", weight = 2, opacity = 1, fillOpacity = 0,label = ~lapply(WBID, htmltools::htmlEscape), data = IWR_wbid ) %>%
-  leaflet::addCircles(color = "green", label = ~lapply(Site, htmltools::htmlEscape),data = CHAP_tr)%>%
-  leaflet::addCircles(color = "blue", label = ~lapply(Site, htmltools::htmlEscape),data = EBAP_tr)
-```
 
 
 

@@ -1,15 +1,9 @@
-name: "Aquatic Preserves"
+name: "Culebra Data Entry"
 navbar:
-  title: "Aquatic Preserve Water Quality and Seagrass"
+  title: "Data Portal"
   left:
-    - text: "Background"
+    - text: "Enter"
       href: index.html
-    - text: "Report"
-      href: Report.html
-    - text: "Appendices"
-      href: Appendices.html
-    - text: "Supplemental"
-      href: supplemetal.html
 output_dir: "."
 css: styles.css
 
