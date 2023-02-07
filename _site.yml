@@ -1,0 +1,16 @@
+name: "Aquatic Preserves"
+navbar:
+  title: "Aquatic Preserve Water Quality and Seagrass"
+  left:
+    - text: "Background"
+      href: index.html
+    - text: "Report"
+      href: Report.html
+    - text: "Appendices"
+      href: Appendices.html
+    - text: "Supplemental"
+      href: supplemetal.html
+output_dir: "."
+css: styles.css
+
+
