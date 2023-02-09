@@ -1,0 +1,33 @@
+---
+title: "Cabra WQ Data Entry"
+author: "Mike Wessel"
+date: "Update 02/09/2023"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r global-options, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+## Background
+
+Since 2014, NOAA has invested in watershed restoration activities on Culebra to reduce land-based sources of pollution (LBSP) to coastal habitats surrounding the island.  To date, 100% of NOAAâ€™s LBSP management priority actions have been funded and are projected to be completed by 2025. These LBSP management priorities represent thousands of best management practices (BMPs) spread across hundreds of smaller scale restoration projects that are implemented in targeted locations to elicit a watershed scale reduction in pollution to the marine environment.
+
+
+## Nearshore Water Quality Data Entry Site
+
+Use the link below "Data Entry" to access the google form for water quality data entry
+
+# [Field Data](https://docs.google.com/forms/d/e/1FAIpQLSd4sNacnMR6bJ9kmtmCmxhOPChgTdoo3RkOXHCMR6f9jJdppg/viewform?vc=0&c=0&w=1&flr=0&dods){target="_blank"}
+# [Lab Nutrients](https://docs.google.com/forms/d/e/1FAIpQLSfm5HSBknXw4RCU5gaZ7r8YqQNQS4yuFJ6jkFqlymizEwq8jw/viewform?vc=0&c=0&w=1&flr=0&dods){target="_blank"}
+
+                        
+
+
+
+
+
+
