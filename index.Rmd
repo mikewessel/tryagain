@@ -2,7 +2,7 @@
 title: "Nearshore WQ Data Entry"
 author: "Mike Wessel"
 date: "Update 02/09/2023"
-output: html_document
+output: github_document
 editor_options: 
   chunk_output_type: console
 ---
