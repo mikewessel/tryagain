@@ -4,8 +4,8 @@ navbar:
   left:
     - text: "Nearshore"
       href: index.html
-    - text: "Cabra"
-      href: Cabra.html
+    - text: "Watershed"
+      href: Watershed.html
 output_dir: "."
 css: styles.css
 
