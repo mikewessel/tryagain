@@ -2,8 +2,10 @@ name: "Culebra Data Entry"
 navbar:
   title: "Data Portal"
   left:
-    - text: "Enter"
+    - text: "Nearshore"
       href: index.html
+    - text: "Cabra"
+      href: Cabra.html
 output_dir: "."
 css: styles.css
 
